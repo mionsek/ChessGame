@@ -19,7 +19,7 @@ public abstract class Figure {
 
 
     abstract public void drawFigure();
-    abstract public void setLocation();
+    abstract public void setLocation(int x, int y);
     abstract public boolean checkIfCanMove();
 
 }
