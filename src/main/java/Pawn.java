@@ -3,16 +3,12 @@ import java.awt.*;
 
 public class Pawn extends Figure {
     private Image image;
-    public Pawn(int x, int y, String name) {
-        super(x, y, name);
+    public Pawn(String color, int size, int marginX, int marginY) {
+        super(color, size, marginX, marginY);
         loadImage();
     }
 
     public void drawFigure() {
-
-    }
-
-    public void setLocation(int x, int y) {
 
     }
 
@@ -22,7 +18,8 @@ public class Pawn extends Figure {
 
     private void loadImage() {
 
-        ImageIcon ii = new ImageIcon(this.getClass().getResource("/white/pawn.png"));
+        //ImageIcon ii = new ImageIcon(this.getClass().getResource("/white/pawn.png"));
+        ImageIcon ii = new ImageIcon(this.getClass().getResource("/test.png"));
 
         image = ii.getImage();
     }
