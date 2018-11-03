@@ -17,10 +17,7 @@ public class Pawn extends Figure {
     }
 
     private void loadImage() {
-
-        //ImageIcon ii = new ImageIcon(this.getClass().getResource("/white/pawn.png"));
-        ImageIcon ii = new ImageIcon(this.getClass().getResource("/test.png"));
-
+        ImageIcon ii = new ImageIcon(this.getClass().getResource("/" + getColor() + "/pawn.png"));
         image = ii.getImage();
     }
 

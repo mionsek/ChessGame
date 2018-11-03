@@ -4,13 +4,34 @@
     <list default="true" id="6a5a72c0-8779-4b9b-bfd8-1f670c16b2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChessFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChessFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Figure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Figure.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/black/bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/black/bishop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/black/king.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/black/king.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/black/knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/black/knight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/black/pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/black/pawn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/black/queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/black/queen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/black/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/black/rock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/white/bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/white/bishop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/white/king.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/white/king.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/white/knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/white/knight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/white/pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/white/pawn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/white/queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/white/queen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/white/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/white/rock.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ChessFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ChessFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Figure.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Figure.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Pawn.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Pawn.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/black/bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/black/bishop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/black/king.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/black/king.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/black/knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/black/knight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/black/pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/black/pawn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/black/queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/black/queen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/black/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/black/rock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/white/bishop.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/white/bishop.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/white/king.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/white/king.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/white/knight.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/white/knight.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/white/pawn.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/white/pawn.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/white/queen.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/white/queen.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/white/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/white/rock.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,14 +60,15 @@
     <session id="-299688310">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -64,12 +86,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
-          <entry key="java" value="5110" />
+          <entry key="java" value="6493" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5110" />
+          <entry key="JAVA" value="6493" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -93,7 +115,7 @@
             <state relative-caret-position="119">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#293#294#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ChessPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="289">
               <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,32 +148,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+            <state relative-caret-position="1000">
+              <caret line="114" column="28" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Pawn.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#drawBoard#0;class#Board#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Pawn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Figure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+            <state relative-caret-position="405">
+              <caret line="100" column="45" lean-forward="true" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+              <folding>
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#934#935#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,6 +199,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>init</find>
+      <find>white</find>
+      <find>pawn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -183,8 +216,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/ChessFrame.java" />
         <option value="$PROJECT_DIR$/src/main/java/MovingAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Pawn.java" />
         <option value="$PROJECT_DIR$/src/main/java/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Pawn.java" />
         <option value="$PROJECT_DIR$/src/main/java/Figure.java" />
       </list>
     </option>
@@ -251,13 +284,10 @@
             <path>
               <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
               <item name="Chess" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Chess" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Chess" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="white" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -268,7 +298,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541165680568" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541207400707" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -319,9 +349,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1634" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23506989" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24142313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -330,7 +359,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -382,6 +411,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Board.java</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/resources/white/bishop.png">
       <provider selected="true" editor-type-id="images" />
@@ -400,7 +441,7 @@
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
-            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -415,19 +456,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Pawn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ChessPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="289">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -437,18 +468,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
+        <state relative-caret-position="1000">
+          <caret line="114" column="28" selection-start-line="114" selection-start-column="28" selection-end-line="114" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#drawBoard#0;class#Board#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Figure.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="48" lean-forward="true" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        <state relative-caret-position="405">
+          <caret line="100" column="45" lean-forward="true" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
+          <folding>
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Pawn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

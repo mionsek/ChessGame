@@ -14,6 +14,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     private int marginY = 50, marginX = 100;
     private int mX, mY;
     private boolean isMouseDrag;
+    private int index;
 
     Board(int size){
         this.setOpaque(false); // do sprawdzenia
@@ -26,8 +27,7 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
         isMouseDrag = false;
         addMouseListener(this);
         addMouseMotionListener(this);
-        MediaTracker mt = new MediaTracker(this);
-
+        index = -1;
     }
 
     @Override
@@ -51,46 +51,26 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     }
 
     private void createTeams() {
-        whiteTeam = new Figure[16];
+        whiteTeam = new Figure[8];
         for (int i = 0; i < 8; i++){
             whiteTeam[i] = new Pawn("white", this.size, this.marginX, this.marginY);
         }
-        pawn = new Pawn("white", this.size, this.marginX, this.marginY);
-//        setLocationsOfFigures();
     }
 
     private void setLocationsOfFigures() {
         for (int i = 0; i < 8; i++){
             whiteTeam[i].setLocationOnBoard(i, 0);
         }
-        pawn.setLocationOnBoard(1, 2);
     }
 
-/*
-    private void drawFigures(Graphics g) {
-        g.drawImage(pawn.getImage(), 100,100,50,50, this);
-    }
-*/
 private void drawFigures(Graphics g) {
     for (int i = 0; i < 8; i++){
-        whiteTeam[i].convertLocToCord();
         g.drawImage(whiteTeam[i].getImage(),
                 whiteTeam[i].getCX(),
                 whiteTeam[i].getCY(),
                 this.size, this.size, this);
     }
-//    pawn.convertLocToCord();
-    g.drawImage(pawn.getImage(), pawn.getCX(), pawn.getCY(), this.size, this.size, this);
 }
-
-    private int Xconv(int x){
-        return x * this.size + this.marginX;
-    }
-
-    private int Yconv(int y){
-        return y * this.size + this.marginY;
-    }
-
 
     private void drawBoard(Graphics g) {
         int x = 0, y = 0, col = 0;
@@ -129,36 +109,55 @@ private void drawFigures(Graphics g) {
         this.mX = e.getX();
         this.mY = e.getY();
 
-        if (pawn.getCX() < mX && pawn.getRX() > mX && pawn.getY() < mY && pawn.getBY() > mY){
-            this.isMouseDrag = true;
+        for(Figure f: whiteTeam){
+            if (f.getCX() < this.mX &&
+                    f.getRX() > this.mX &&
+                    f.getCY() < this.mY &&
+                    f.getBY() > this.mY){
+                f.setMoveTrue();
+                this.isMouseDrag = true;
+                break;
+            }
         }
+/*
+        for (int i = 0; i < whiteTeam.length; i++) {
+            if (whiteTeam[i].getCX() < this.mX &&
+                    whiteTeam[i].getRX() > this.mX &&
+                    whiteTeam[i].getY() < this.mY &&
+                    whiteTeam[i].getBY() > this.mY){
+                whiteTeam[i].setMoveTrue();
+                index = i;
+                this.isMouseDrag = true;
+                break;
+            }
 
-//        if ((Xconv(pawn.getX()) < mX) && (Xconv(pawn.getX()) + this.size > mX) && (Yconv(pawn.getY()) < mY && (Yconv(pawn.getY()) + this.size > mY))){
-//             isMouseDrag = true;
-//        }
-        //System.out.println("mX = " + mX + "pos X =  " + pawn.getX() + this.size  +" mY = " + mY + " pos X =  "+ pawn.getY() + this.size + " mouse drag = " + isMouseDrag);
-
-        System.out.println("MX = " + mX + "  MY = " + mY);
-        System.out.println("LX = " + Xconv(pawn.getX()) + "  LY = " + Yconv(pawn.getY()));
-        System.out.println("RX = " + Xconv(pawn.getX()) + size + "  RY = " + Yconv(pawn.getY()) + size);
-        System.out.println("Drag = " + isMouseDrag);
+        }
+        */
         e.consume();
-
     }
 
     public void mouseReleased(MouseEvent e) {
     if (isMouseDrag){
-        int currentMX = e.getX();
-        int currentMY = e.getY();
+        for(Figure f : whiteTeam){
+            if(f.isInMove()){
+                f.convertCordToLoc();
+                f.checkIfInBoard();
+                f.convertLocToCord();
+                f.setMoveFalse();
+                break;
+            }
+        }
+/*
+        if (whiteTeam[index].isInMove() && index != -1){
+            whiteTeam[index].convertCordToLoc();
+            whiteTeam[index].checkIfInBoard();
+            whiteTeam[index].convertLocToCord();
+            whiteTeam[index].setMoveFalse();
+            index = -1;
 
-        pawn.convertCordToLoc();
-        pawn.convertLocToCord();
-//        pawn.setCoords(currentMX - this.size / 2 , currentMY - this.size / 2);        mX = currentMX;
-        mX = currentMX;
-        mY = currentMY;
+        }
+*/
         repaint();
-        e.consume();
-
     }
         isMouseDrag = false;
         e.consume();
@@ -173,22 +172,26 @@ private void drawFigures(Graphics g) {
     }
 
     public void mouseDragged(MouseEvent e) {
+// && whiteTeam[index].isInMove()
         if (isMouseDrag)
         {
             int currentMX = e.getX();
             int currentMY = e.getY();
-            pawn.setCoords(currentMX, currentMY);
 
+            for(Figure f : whiteTeam) {
+                if (f.isInMove()) {
+                    f.setCoords(currentMX, currentMY);
+                    break;
+                }
+            }
+
+//                    whiteTeam[index].setCoords(currentMX, currentMY);
             mX = currentMX;
             mY = currentMY;
             repaint();
             e.consume();
         }
-
-
     }
 
-    public void mouseMoved(MouseEvent e) {
-
-    }
+    public void mouseMoved(MouseEvent e) { }
 }
