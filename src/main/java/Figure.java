@@ -9,13 +9,16 @@ public abstract class Figure {
     private int previousX, previousY;
     private boolean isInMove;
 
-    Figure(String color, int size, int marginX, int marginY)
+    Figure(String color)
     {
         this.color = color;
-        this.size = size;
-        this.marginX = marginX;
-        this.marginY = marginY;
         this.isInMove = false;
+    }
+
+    void init(int s, int mx, int my){
+        this.size = s;
+        this.marginX = mx;
+        this.marginY = my;
     }
 
     int getX(){
@@ -34,6 +37,10 @@ public abstract class Figure {
 
     int getBY(){ return this.cordY + this.size;}
 
+    int getPreviousX(){return this.previousX;}
+
+    int getPreviousY(){return  this.previousY;}
+
     String getColor() { return this.color;}
 
     public boolean isInMove(){
@@ -49,9 +56,11 @@ public abstract class Figure {
 
     abstract public void drawFigure();
 
+    abstract void loadImage();
+
     void setLocationOnBoard(int loc_x, int loc_y){
-        this.x = loc_x;
-        this.y = loc_y;
+        this.previousX = this.x = loc_x;
+        this.previousY = this.y = loc_y;
 
         convertLocToCord();
     }
@@ -89,13 +98,17 @@ public abstract class Figure {
         this.cordY = CY - this.size / 2 ;
     }
 
-    void checkIfInBoard(){
+    boolean checkIfInBoard(){
         if (this.x >= 0 && this.x <= 7 && this.y >= 0 && this.y <= 7){
-            return;
+            return true;
         }
-        else {
-            restoreXY();
-        }
+        return false;
+     }
+
+    boolean checkIfFieldEmpty(int X, int Y){
+        if (this.x == X && this.y == Y)
+            return false;
+        return true;
     }
 
     abstract public boolean checkIfCanMove();

@@ -51,20 +51,40 @@ public class Board extends JPanel implements MouseListener, MouseMotionListener 
     }
 
     private void createTeams() {
-        whiteTeam = new Figure[8];
+        whiteTeam = new Figure[16];
         for (int i = 0; i < 8; i++){
-            whiteTeam[i] = new Pawn("white", this.size, this.marginX, this.marginY);
+            whiteTeam[i] = new Pawn("white");
+        }
+        whiteTeam[8] = new Rock("white");
+        whiteTeam[9] = new Rock("white");
+        whiteTeam[10] = new Queen("white");
+        whiteTeam[11] = new King("white");
+        whiteTeam[12] = new Bishop("white");
+        whiteTeam[13] = new Bishop("white");
+        whiteTeam[14] = new Knight("white");
+        whiteTeam[15] = new Knight("white");
+
+        for (Figure f: whiteTeam) {
+            f.init(this.size, this.marginX, this.marginY);
         }
     }
 
     private void setLocationsOfFigures() {
         for (int i = 0; i < 8; i++){
-            whiteTeam[i].setLocationOnBoard(i, 0);
+            whiteTeam[i].setLocationOnBoard(i, 1);
         }
+        whiteTeam[8].setLocationOnBoard(0, 0);
+        whiteTeam[9].setLocationOnBoard(7, 0);
+        whiteTeam[10].setLocationOnBoard(4, 0);
+        whiteTeam[11].setLocationOnBoard(3, 0);
+        whiteTeam[12].setLocationOnBoard(2, 0);
+        whiteTeam[13].setLocationOnBoard(5, 0);
+        whiteTeam[14].setLocationOnBoard(1, 0);
+        whiteTeam[15].setLocationOnBoard(6, 0);
     }
 
 private void drawFigures(Graphics g) {
-    for (int i = 0; i < 8; i++){
+    for (int i = 0; i < whiteTeam.length; i++){
         g.drawImage(whiteTeam[i].getImage(),
                 whiteTeam[i].getCX(),
                 whiteTeam[i].getCY(),
@@ -109,54 +129,43 @@ private void drawFigures(Graphics g) {
         this.mX = e.getX();
         this.mY = e.getY();
 
-        for(Figure f: whiteTeam){
-            if (f.getCX() < this.mX &&
-                    f.getRX() > this.mX &&
-                    f.getCY() < this.mY &&
-                    f.getBY() > this.mY){
-                f.setMoveTrue();
-                this.isMouseDrag = true;
-                break;
-            }
-        }
-/*
         for (int i = 0; i < whiteTeam.length; i++) {
             if (whiteTeam[i].getCX() < this.mX &&
                     whiteTeam[i].getRX() > this.mX &&
-                    whiteTeam[i].getY() < this.mY &&
+                    whiteTeam[i].getCY() < this.mY &&
                     whiteTeam[i].getBY() > this.mY){
                 whiteTeam[i].setMoveTrue();
                 index = i;
                 this.isMouseDrag = true;
                 break;
             }
-
         }
-        */
         e.consume();
     }
 
     public void mouseReleased(MouseEvent e) {
     if (isMouseDrag){
-        for(Figure f : whiteTeam){
-            if(f.isInMove()){
-                f.convertCordToLoc();
-                f.checkIfInBoard();
-                f.convertLocToCord();
-                f.setMoveFalse();
-                break;
-            }
-        }
-/*
+
         if (whiteTeam[index].isInMove() && index != -1){
             whiteTeam[index].convertCordToLoc();
+
+            if (!whiteTeam[index].checkIfInBoard() || !whiteTeam[index].checkIfCanMove()){
+                whiteTeam[index].restoreXY();
+            }
+
+            for (int i = 0; i < whiteTeam.length; i++){
+                if (!whiteTeam[index].checkIfFieldEmpty(whiteTeam[i].getX(), whiteTeam[i].getY()) && i != index){
+                    whiteTeam[index].restoreXY();
+                    break;
+                }
+            }
+
             whiteTeam[index].checkIfInBoard();
             whiteTeam[index].convertLocToCord();
             whiteTeam[index].setMoveFalse();
             index = -1;
 
         }
-*/
         repaint();
     }
         isMouseDrag = false;
@@ -172,20 +181,11 @@ private void drawFigures(Graphics g) {
     }
 
     public void mouseDragged(MouseEvent e) {
-// && whiteTeam[index].isInMove()
-        if (isMouseDrag)
+        if (isMouseDrag && whiteTeam[index].isInMove())
         {
             int currentMX = e.getX();
             int currentMY = e.getY();
-
-            for(Figure f : whiteTeam) {
-                if (f.isInMove()) {
-                    f.setCoords(currentMX, currentMY);
-                    break;
-                }
-            }
-
-//                    whiteTeam[index].setCoords(currentMX, currentMY);
+            whiteTeam[index].setCoords(currentMX, currentMY);
             mX = currentMX;
             mY = currentMY;
             repaint();
