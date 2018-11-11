@@ -18,7 +18,8 @@ public class King extends Figure {
     public boolean checkIfCanMove() {
         int deltaX = abs(getX() - getPreviousX());
         int deltaY = abs(getY() - getPreviousY());
-        return deltaX == 1 || deltaY == 1;
+
+        return (deltaX == 1 && deltaY == 0) || (deltaX == 0 && deltaY == 1) || deltaX == 1 && deltaY == 1;
     }
     void loadImage() {
         ImageIcon ii = new ImageIcon(this.getClass().getResource("/" + getColor() + "/king.png"));

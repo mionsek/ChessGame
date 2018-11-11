@@ -15,8 +15,14 @@ public class Pawn extends Figure {
     }
 
     public boolean checkIfCanMove() {
-        if((getX() == getPreviousX() && (getY() == getPreviousY() + 1)) ||
-           (getX() == getPreviousX() && (getY() == getPreviousY() + 2) && (!moved))){
+        int move = 0;
+        if (getColor().equals("white"))
+            move = 1;
+        else
+            move = -1;
+
+        if((getX() == getPreviousX() && (getY() == getPreviousY() + 1*move)) ||
+           (getX() == getPreviousX() && (getY() == getPreviousY() + 2*move) && (!moved))){
             moved = true;
             return true;
         }

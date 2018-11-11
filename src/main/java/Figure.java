@@ -99,16 +99,11 @@ public abstract class Figure {
     }
 
     boolean checkIfInBoard(){
-        if (this.x >= 0 && this.x <= 7 && this.y >= 0 && this.y <= 7){
-            return true;
-        }
-        return false;
-     }
+        return this.x >= 0 && this.x <= 7 && this.y >= 0 && this.y <= 7;
+    }
 
     boolean checkIfFieldEmpty(int X, int Y){
-        if (this.x == X && this.y == Y)
-            return false;
-        return true;
+        return this.x != X || this.y != Y;
     }
 
     abstract public boolean checkIfCanMove();
